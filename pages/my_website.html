@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/style/my_website.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="website-title">Maeming Website</a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" id="menuBtn">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="home" id="home">
+      <div class="container home-grid">
+        <div class="home-content">
+          <span class="personal-text">Personal Website</span>
+          <h1>Hello, I'm <span>Andrea Mae S. Manahan,</span></h1>
+          <p>
+            a motivated BSIT 2 South 5 student. I was born on July 18, 2006 in Orani, Bataan, 
+            and I currently reside in Brgy. Platero, General Mamerto Natividad, Nueva Ecija. 
+            As the soon-to-be Governor of CITSC for the School Year 2026~2027, 
+            I aspire to be an honest and responsible leader who inspires 
+            others to strive for excellence and continuous growth.
+          </p>
+          <div class="home-btns">
+            <a href="#projects" class="btn visit-btn">View My Work</a>
+            <a href="#contact" class="btn contact-btn">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="profile-container">
+            <img src="/images/home-pic.jpeg" alt="My picture">
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <span>About Me</span>
+          <h2>Get to Know Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="card">
+            <h3>Background</h3>
+            <p>
+              I am a dedicated and goal-oriented individual with a strong passion for leadership and personal development. 
+              Throughout my academic journey, I have actively participated in activities that enhance my skills, values, and confidence. 
+              I believe in continuous learning and self-improvement as key factors in achieving success.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Education & Interests</h3>
+            <p>
+              My interests include exploring new technologies, improving my programming skills, and engaging in leadership and organizational activities. 
+              I also enjoy working on creative projects, collaborating with others, and finding innovative solutions to problems. 
+              These interests motivate me to grow both academically and personally.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-title">
+          <span>Portfolio</span>
+          <h2>My Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Campus Navigation System</h3>
+            <p>
+              A campus navigation system that helps students locate buildings, offices, and facilities within the school.
+              It will include an interactive map and directions to improve accessibility and convenience.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>Online Voting System</h3>
+            <p>
+              An online voting system designed to provide a secure and efficient platform for conducting student elections. 
+              This system will ensure transparency and accuracy through user authentication, vote tracking, and real-time results display.
+            </p>
+          </article>
+
+          <article class="project-card">
+            <h3>E-Commerce Website</h3>
+            <p>
+              An e-commerce website that allows users to browse products, add items to cart, and complete purchases online. 
+              The system will focus on user-friendly navigation, secure transactions, and responsive design.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <span>Contact</span>
+          <h2>Get in Touch</h2>
+        </div>
+
+        <div class="contact-card">
+            <p>You can reach me through my social media platforms:</p>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1G7i9qX31x/"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://www.tiktok.com/@_txrdea?_r=1&_t=ZS-95jRp6hzpKL"><i class="fab fa-tiktok"></i> TikTok</a>
+                <a href="https://www.instagram.com/itsandreqeaa_?igsh=MWo0ZTBmNjd3a3o5Yg=="><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
