@@ -400,8 +400,4 @@ section {
         max-width: 220px;
         text-align: center;
     }
-
-    .social-links {
-        flex-direction: column;
-    }
 }
