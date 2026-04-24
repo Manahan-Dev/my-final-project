@@ -22,7 +22,9 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="menu-btn" id="menuBtn">Menu</button>
+      <button class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
   </header>
 
@@ -138,9 +140,57 @@
   <script>
     const menuBtn = document.getElementById("menuBtn");
     const navLinks = document.getElementById("navLinks");
+    const navItems = document.querySelectorAll(".nav-links a");
+    const sections = document.querySelectorAll("section");
+    const menuIcon = menuBtn.querySelector("i");
 
     menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("show");
+        navLinks.classList.toggle("show");
+        menuBtn.classList.toggle("active");
+
+        if (menuBtn.classList.contains("active")) {
+            menuIcon.classList.remove("fa-bars");
+            menuIcon.classList.add("fa-xmark");
+        } else {
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+        }
+    });
+
+    navItems.forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+            menuBtn.classList.remove("active");
+            menuIcon.classList.remove("fa-xmark");
+            menuIcon.classList.add("fa-bars");
+
+            navItems.forEach(item => item.classList.remove("active"));
+            link.classList.add("active");
+        });
+    });
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 160;
+
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 5) {
+            current = "contact";
+        }
+
+        navItems.forEach(link => {
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+        });
     });
   </script>
 </body>

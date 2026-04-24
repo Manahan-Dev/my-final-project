@@ -66,18 +66,21 @@ ul {
     transition: 0.3s;
 }
 
+.nav-links a.active,
 .nav-links a:hover {
     color: #FF4D9D;
 }
 
 .menu-btn {
     display: none;
+    width: 42px;
+    height: 42px;
     background: linear-gradient(135deg, #8B5CF6, #FF4D9D);
     color: #ffffff;
     border: none;
-    padding: 10px 14px;
     border-radius: 10px;
-    font-size: 18px;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -90,6 +93,17 @@ ul {
 .menu-btn:active {
     transform: scale(0.95);
     box-shadow: 0 0 10px rgba(255, 77, 157, 0.6);
+}
+
+.menu-btn i {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1;
+    transition: 0.3s ease;
+}
+
+.menu-btn.active i {
+    transform: rotate(180deg);
 }
 
 .home {
@@ -297,7 +311,11 @@ section {
 
 @media (max-width: 768px) {
     .menu-btn {
-        display: block;
+        display: flex;
+        width: 42px;
+        height: 42px;
+        align-items: center;
+        justify-content: center;
     }
 
     .nav-links {
